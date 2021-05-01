@@ -19,6 +19,10 @@ config/name="Proyecto Godot - Clase 4"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
+[audio]
+
+enable_audio_input=true
+
 [display]
 
 window/size/width=800
