@@ -5,7 +5,7 @@ onready var cannon = $Cannon
 export (float) var ACCELERATION:float = 20.0
 export (float) var H_SPEED_LIMIT:float = 600.0
 export (float) var FRICTION_WEIGHT:float = 0.1
-export (float) var gravity:float = 4
+export (float) var gravity:float = 6
 
 var velocity:Vector2 = Vector2.ZERO
 var projectile_container
@@ -36,7 +36,7 @@ func _physics_process(delta):
 		velocity.x = lerp(velocity.x, 0, FRICTION_WEIGHT) if abs(velocity.x) > 1 else 0
 	move_and_slide(Vector2.DOWN, -Vector2.DOWN) # hackazo para el is_on_floor()
 	if is_on_floor() and Input.is_action_pressed("jump"):
-		velocity.y -= 100
+		velocity.y -= 500
 	else:
 		velocity.y +=10
 		
